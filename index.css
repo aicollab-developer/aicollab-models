@@ -1,84 +1,99 @@
-p {
-    text-indent: 1.5cm;
-}
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #ececf1;
+    color: #333333;
+    background: #1e1d1d;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    min-height: 100vh;
     scrollbar-color: #888 #f1f1f1; /* Botão de rolagem e track */
 }
-.navbar {
-    padding: 10px;
-    display: flex;
-    align-items: center;
-}
-.logo {
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-.theme-button {
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-left: 10px;
-}
-.theme-button:hover {
-    background-color: #eaeaea;
-}
-.container {
-    display: flex;
-    flex-grow: 1;
-}
-.sidebar-container {
-    flex-basis: 25%;
-    padding: 20px;
-    transition: background-color 0.3s ease;
-    background-color: #1a1a1a;
-    color: #ffffff;
-    margin: -8px 10px -10px -8px;
+
+.logo-index {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.sidebar-container ul {
+.logo-index img {
+    max-width: 200px;
+}
+
+.container-index {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-index {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 450px;
+}
+
+p{
+    color: #c7c7c7;
+    padding: 10px;
+}
+a{
+    color: #c7c7c7;
+}
+
+.button-index {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.button-index:hover {
+    background-color: #1e1d1d;
+}
+
+.button-index:focus {
+    outline: none;
+}
+
+.footer-index {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 20px;
+    color: #888888;
+}
+
+.sidebar-index {
+    flex-basis: 15%;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+.sidebar-index ul {
     list-style-type: none;
     padding: 0;
 }
-.sidebar-container li {
+.sidebar-index li {
     margin-bottom: 10px;
 }
-.sidebar-container a {
+.sidebar-index a {
     display: block;
     padding: 8px 16px;
     border-radius: 5px;
     text-decoration: none;
-    background-color: #1a1a1a;
-    color: #ffffff;
     transition: background-color 0.3s ease;
 }
-.sidebar-container a:hover {
+.sidebar-index a:hover {
     background-color: #383838;
-}
-
-
-.content {
-    flex-basis: 85%;
-    padding: 20px;
-    background: #333333;
-    margin: -10px ;
-}
-.footer {
-    padding: 20px;
-    text-align: center;
-    color: #888888;
-}
-.dark-theme {
-    background-color: #333333;
-    color: #ffffff;
 }
 
 /* Estilizar a barra de rolagem inteira */
@@ -103,14 +118,17 @@ body {
     border-radius: 4px; /* Raio da borda do track */
 }
 
+
 .back-link {
     display: inline-block;
     color: #919191;
     text-decoration: none;
     padding: 10px;
-    position: relative;
+    position: absolute; /* Adicionado */
+    top: 10px; /* Adicionado */
+    left: 20px; /* Adicionado */
     transition: all 0.3s ease;
-    line-height: 20px; /* Esta linha foi adicionada */
+    line-height: 20px;
 }
 
 .back-link:before {
@@ -123,7 +141,7 @@ body {
     transform: rotate(-45deg);
     left: 0;
     top: 50%;
-    margin-top: -7px;  /* Isso foi modificado */
+    margin-top: -7px;
 }
 
 .back-link:hover {
